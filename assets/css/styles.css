@@ -1,0 +1,1566 @@
+/* GLOBAL
+-------------------------------------------------- */
+body, html {
+/*padding-bottom: 40px;*/
+color: #5a5a5a;
+padding-bottom:0; !important
+margin-bottom:0; !important
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+z-index: 10;
+}
+
+.right {
+text-align:right;
+}
+.italic {
+font-style:italic;
+}
+
+.underline {
+text-decoration:underline;
+}
+
+.maxFill {
+width:100%;
+height:auto;
+}
+
+.commFullHeight {
+height:100%;
+position:absolute;
+display:inline-block;
+top:0;
+}
+
+.bold {
+font-weight:bold;
+}
+
+.navbar-wrapper {
+margin-top: 20px;
+margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+
+
+@font-face {
+font-family: introFont;
+src: url("../fonts/Intro.eot"); /* IE9 Compat Modes */
+src: url("../fonts/Intro.otf") format("opentype");
+src: url("../fonts/Intro.otf?") format("eot"),
+url("../fonts/Intro.ttf")  format('truetype');
+
+}
+
+@font-face {
+font-family: proximaNova;
+src: url("../fonts/ProximaNova-Light.eot"); /* IE9 Compat Modes */
+src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+src: url("../fonts/ProximaNova-Light.otf?") format("eot"),
+url('../fonts/ProximaNova-Light.ttf')  format('truetype');
+}
+
+
+h1,h2,h3,h4,h5 {
+font-family:introFont, "Arial Black", Verdana, "Droid Sans", sans-serif;
+}
+
+.marginTop {
+margin-top:65px;
+}
+
+.marginTop-Extra {
+margin-top:130px;
+}
+
+.FlagBottom {
+width: 100px;
+height: 16px;
+padding-top: 15px;
+position: relative; 
+background: red;
+color: white;
+font-size: 11px;
+letter-spacing: 0.2em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.white {
+color:white;
+}
+
+.black {
+color:black;
+}
+
+.FlagBottom:after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 0;
+border-bottom: 13px solid #transparent;
+border-left: 55px solid transparent;
+border-right: 55px solid transparent;
+background:transparent;
+
+}
+
+#goToMain, #shareButtons, #goToMainWrap {
+display:none;
+}
+
+#goToMain {
+text-transform:uppercase;
+}
+
+.mainCaption {
+background: rgba(255, 255, 255, 0.85); 
+position: absolute; 
+left: 0; 
+bottom:0px;
+right:0;
+padding:18px 0; 
+line-height:1.2em;
+width:100%;
+height:145px;
+font-size:19px;
+text-align:left;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#edTech .mainCaption {
+font-size:17px;
+}
+
+
+@media (max-width: 910px) {
+
+.marginTop-Extra{
+margin-top:30px;
+}
+
+}
+
+@media (max-width: 693px) {
+
+#edTech .mainCaption {
+font-size:14px;
+}
+
+.marginTop {
+margin-top:30px;
+}
+
+
+}
+
+
+@media (max-width: 493px) {
+.mainCaption {
+font-size:14px;
+}
+
+#edTech .mainCaption {
+font-size:13px;
+}
+
+}
+
+@media (max-width: 999px){
+.navbar-nav > li > a {
+font-size:14px;
+color:white;
+}
+}
+/* WHO WE ARE
+-------------------------------------------------- */
+.whoweare {
+background-color:#ffce74;
+color:white;
+}
+
+.whoweare .activeOn, .whoweare:hover. .whoweare li, .whoweare dropdown-menu {
+background-color:#ffa90a;
+color:white;
+}
+
+.whoweare .activeOn, .whoweare li, .whoweare dropdown-menu, .whoweare:hover {
+background-color:#ffa90a;
+color:black;
+}
+
+.letterOrangeBox {
+background: rgba(255, 169, 10, 0.8); 
+padding:20px;
+margin-top:45px;
+font-size:14px;
+position:relative;
+display:inline;
+bottom:0;
+}
+
+#whoWeAre .mainCaption {
+font-size:25px;
+line-height:1.5em;
+}
+@media (max-width: 970px) {
+.letterOrangeBox {
+padding:20px 5px 5px 5px;
+width:100%;
+margin-top:10px;
+position:inherit;
+}
+
+}
+
+
+@media (max-width: 993px) {
+
+#whoWeAre .mainCaption {
+padding:24px 0;
+font-size:20px;
+line-height:1.4em;
+}
+
+}
+
+@media (max-width: 1100px) {
+
+#whoWeAre5 p {
+font-size:13px;
+line-height:1.25em;
+}
+
+}
+
+
+@media (max-width: 1000px) {
+.container {
+     padding-right: 0; /*15px in bootstrap.css*/
+     padding-left: 0;  /*idem*/
+     margin-right: auto;
+     margin-left: auto;
+}
+}
+
+/* CITY FUNDS
+-------------------------------------------------- */
+.schools, .schools li, schools dropdown-menu {
+background-color:#ff74b2;
+color:white;
+}
+
+.schools li, .schools dropdown-menu, .schools:hover {
+background-color:#ff0a78;
+color:white;
+}
+
+
+/* SEED FUND
+-------------------------------------------------- */
+.edtech, .edtech li, edtech dropdown-menu {
+background-color:#74e3ff;
+color:white;
+}
+
+.edtech li, .edtech dropdown-menu, .edtech:hover {
+background-color:#0aceff;
+color:white; 
+}
+
+.mobileImage {
+display:none;
+}
+
+@media (max-width: 993px) {
+.commFullHeight {
+display:none;
+}
+
+.mobileImage {
+display:inline;
+}
+
+.hideMobile {
+display:none;
+}
+
+}
+
+
+/* LTT
+-------------------------------------------------- */
+.teachers, .teachers li, teachers dropdown-menu{
+background-color:#7399e1;
+color:white;
+}
+
+.teachers li, .teachers dropdown-menu, .teachers:hover {
+background-color:#084bca;
+color:black;
+}
+
+
+/* COMMUNITY
+-------------------------------------------------- */
+.community {
+background-color:#c0f0be;
+color:white;
+}
+
+.community .activeOnOn, .community li, .community dropdown-menu, .community:hover {
+background-color:#90e500;
+color:black;
+}
+
+.commBlueBox {
+background: rgba(8, 75, 202, 0.7); 
+padding:40px; 
+line-height:2.0em; 
+text-align:left; 
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; 
+position:absolute; bottom:0; 
+min-height:450px;
+font-size:14px;
+}
+
+.commBlueBox p {
+font-size:14px;
+line-height:1.4em
+}
+
+.learnToTeachHead {
+color:white;
+text-shadow: 2px 2px 0px rgba(0,0,0,0.9); 
+margin:-55px 0 0 -15px; 
+font-size:4.8vmin;
+}
+
+
+
+@media (max-width: 670px) {
+.commBlueBox {
+padding:5px;
+min-height:0px;
+
+}
+
+.learnToTeachHead {
+margin:-15px 0 0 0px; 
+
+}
+.commBlueBox p {
+font-size:12px;
+line-height:1.2em
+}
+
+.commBlueBox h1 {
+font-size:20px;
+}
+}
+
+
+/* THANK YOU
+-------------------------------------------------- */
+.thankyou, .thankyou li, thankyou dropdown-menu {
+background-color:#fbf458;
+color:white;
+}
+
+.thankyou .activeOn, .thankyou li, .thankyou dropdown-menu, .thankyou:hover {
+background-color:#fff118;
+color:black;
+}
+
+.anchorButtonContainer {
+position:relative; 
+height:100%; 
+min-height:100px;
+}
+
+
+
+
+
+.anchorButton {
+border-left:solid 4px #ffa90a; 
+position:absolute; 
+bottom:-28px; 
+height:50px; 
+width:100%; 
+padding-left:4px;
+padding-top:5px; 
+color:#ffa90a;
+text-shadow: 2px 2px 0px rgba(255,255,255,0.9);
+font-size:21px;
+-webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
+transition: height 1s;
+font-family:introFont, "Arial Black", Verdana, "Droid Sans", sans-serif;
+}
+
+.twoLineButton {
+height:75px;
+line-height:1.3em;
+}
+
+#schoolsAndCities .anchorButton {
+color:#ff0a6d;
+border-left:solid 4px #ff0a6d; 
+}
+
+.twitter-share-button {
+width: 58px !important;
+}
+
+#carousel .slides li {
+width:150px !important;
+}
+
+#schoolsAndCities ul a {
+color:#ff0a6d;
+font-size:15px;
+line-height:1.9em;
+}
+
+#edTech .anchorButton {
+color:#0aceff;
+border-left:solid 4px #0aceff; 
+}
+
+#teachers .anchorButton {
+color:#084bca;
+border-left:solid 4px #084bca; 
+}
+
+#thankYou .anchorButton {
+color:black;
+text-shadow: 2px 2px 0px rgba(255,241,24,0.9);
+border-left:solid 4px #fff118; 
+}
+
+.anchorButton:hover {
+height:75px;
+-webkit-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-o-animation-duration: 2s;
+animation-duration: 2s;
+}
+
+.twoLineButton:hover {
+height:100px;
+-webkit-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-o-animation-duration: 2s;
+animation-duration: 2s;
+}
+
+@media (max-width: 1200px) {
+.anchorButton {
+font-size:20px;
+padding-right:4px;
+}
+}
+
+label {
+display: inline-block;
+width: 5em;
+}
+.red {
+color: red;
+}
+
+
+@media (max-width: 440px) {
+.anchorButton {
+display:none;
+}
+
+#schoolsAndCities li a {
+display:none;
+}
+
+.mainCaption {
+
+}
+
+.anchorButton:hover {
+height:65px;
+-webkit-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-o-animation-duration: 2s;
+animation-duration: 2s;
+}
+
+p {
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+font-size:15px;	  
+}	
+
+.hide-mobile {
+display:none;
+}
+
+}
+
+.mainTitleContainer {
+position: absolute; 
+bottom:150px;
+left:0px;
+color:white;
+text-align:left;
+margin:auto;
+width:100%;
+padding-left:20px;
+text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+
+}
+
+mainTitleContainer h1{
+font-size: 75px;
+}
+
+.locationHeader {
+color:#90e500;
+margin-left:10px;
+margin-bottom:0px;
+}
+
+.logoBox {
+margin-top:35px;
+margin-left:-15px;
+}
+
+.company-logo {
+-webkit-transition: all 0.5s;
+z-index:1000;
+float:left;
+height:67px; 
+width:75px; 
+margin:10px;
+border-radius: 0px;
+}
+
+@media (max-width: 450px) {
+.company-logo {
+margin:5px 5px;  
+}
+}
+
+.company-logo:hover{
+-webkit-filter: none; /*Returns to default state*/
+}
+
+.company-logo.brightness:hover {
+-webkit-filter: brightness(0.5);
+}
+
+.saturate {-webkit-filter: saturate(3);}
+.grayscale {-webkit-filter: grayscale(100%);}
+.contrast {-webkit-filter: contrast(160%);}
+.brightness {-webkit-filter: brightness(1.0);}
+.blur {-webkit-filter: blur(3px);}
+.invert {-webkit-filter: invert(100%);}
+.sepia {-webkit-filter: sepia(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);}
+.opacity {-webkit-filter: opacity(50%);}
+
+
+
+.slider{
+width: 640px; /*Same as width of the large image*/
+position: relative;
+/*Instead of height we will use padding*/
+padding-top: 320px; /*That helps bring the labels down*/
+
+margin: 20px auto 100px auto;
+
+/*Lets add a shadow*/
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+position: absolute;
+left: 0; top: 0;
+transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+display: none;
+}
+
+.slider label {
+/*Lets add some spacing for the thumbnails*/
+margin: 18px 0 0 18px;
+border: 3px solid #999;
+
+float: left;
+cursor: pointer;
+transition: all 0.5s;
+
+/*Default style = low opacity*/
+opacity: 0.6;
+}
+
+.slider label img{
+display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+border-color: #666;
+opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+opacity: 0;
+transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+opacity: 1;
+transform: scale(1);
+}
+
+.yellow {
+color:#FF0;
+}
+
+#schoolsAndCities4 h3 {
+
+}
+
+#schoolsAndCities4 h3 {
+margin-top:40px;
+}
+
+
+
+/* Style for our header texts 
+* --------------------------------------- */
+/*h1{
+font-size: 5em;	
+font-family: arial,helvetica;
+color: #fff;
+margin:0;
+padding:0;
+}
+.intro p{
+color: #fff;
+}*/
+
+/* Centered texts in each section 
+* --------------------------------------- */
+.section{
+/*text-align:center;*/
+}
+
+
+#section0 #slide1 {
+background: url(../img/2500x1400/01-About.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+}
+
+#section1 #slide1 {
+background: url(../img/2500x1400/05-Community.png) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+position:fixed;
+height: 50px;
+display:block;
+width: 100%;
+background: #333;
+z-index:9;
+color: #f2f2f2;
+padding: 20px 0 0 0;
+}
+
+#header{
+top:0px;
+}
+#footer{
+bottom:0px;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu {
+bottom: 80px;
+}
+#infoMenu li a {
+color: #fff;
+z-index: 999;
+}
+
+.navbar-nav>li {
+margin-left:15px;
+width:106px;
+text-align:center;
+}
+
+@media (max-width: 999px) {
+.navbar-nav>li {
+margin-left:0px;
+width:100%;
+text-align:center;
+}
+
+.navbar-nav > li > a {
+padding:0;
+line-height:3em;
+}
+
+#subHeader-container {
+	display:none;
+}
+
+}
+
+#home { 
+/* background: url('img/class.jpg') no-repeat center center fixed; */
+background-color:#0F6;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+padding-top:50px;
+width:100%;
+height:100%;
+}
+
+@media (min-width:769px) {
+.dropdown:hover .dropdown-menu {
+display: block;
+padding: 0;
+text-align:left;
+width:106px;
+}			
+
+
+.first {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/1.png);
+color:#FFF; 
+font-color:#FFF;
+line-height:1.0em;
+}
+
+.second {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/2.png); 
+color:#FFF; 
+font-color:#FFF 
+}
+
+.third {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/3.png); 
+}
+
+.fourth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(./img/Numbers/4.png); 
+}
+
+.fifth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url("./img/Numbers/5.png"); 
+}
+
+
+.sixth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url("./img/Numbers/6.png"); 
+}
+
+.dropdown-toggle{
+background-position:bottom right; 
+background-repeat:no-repeat;
+}	
+
+.dropdown-toggle:hover{
+background-image:none;
+}
+
+.navbar-nav > li > a {
+padding-top: 0px;
+transition: padding-top 0.5s;
+-webkit-transition: padding-top 0.5s;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:active,
+.navbar-nav > li > a:focus{
+text-align:center;
+font-color:#000;
+color:#000;
+padding-top: 15px;
+text-transform:uppercase;
+}
+
+.navButton{
+color:#FFF; 
+font-color:#FFF 
+}
+
+}
+
+
+
+@media (min-width:1100px) {
+#goToMain{
+display:inline;
+font-style:italic;
+text-align:center;
+margin-right:10px;
+text-transform:lowercase;
+padding:0;
+line-height:1em;
+}
+
+#goToMainWrap {
+display:inline;
+}
+
+#goToMain:hover{
+font-style:italic;
+font-style:bold;
+text-align:center;
+margin-right:10px;
+text-transform:lowercase;
+padding:0;
+line-height:1em;
+}
+}
+
+@media (min-width:1220px) {
+#shareButtons{
+display:inline;
+line-height:2.5em;
+padding-top:5px;
+font-style:italic;
+text-align:center;
+margin-right:10px;
+}
+}
+
+#fader, #seedSlide  {
+position: absolute; 
+width: 100%;
+}
+
+#fader img {
+/* NOT SURE YET */
+
+}
+
+
+.controlArrowNew {
+position:fixed;
+top: 50%;
+cursor: pointer;
+width: 0;
+height: 0;
+z-index:1000000;
+/*border-style: solid;*/
+margin-top: -38px;
+}
+.controlArrowNew.prev {
+height:64px;
+width:45px;
+background-image:url(img/arrow-left.png);	
+left: 15px;
+transition: left 1.0s;
+-webkit-transition: left 1s; /* For Safari 3.1 to 6.0 */
+/*width: 0;
+border-width: 38.5px 34px 38.5px 0;
+border-color: transparent #fff transparent transparent;*/
+}
+
+.controlArrowNew.prev:hover {
+left:5px;
+
+}
+
+.controlArrowNew.next:hover {
+right:5px;
+}
+.controlArrowNew.next {
+height:64px;
+width:45px;
+background-image:url(img/arrow-right.png);	
+right: 15px;
+transition: right 1.0s;
+-webkit-transition: right 1.0s; /* For Safari 3.1 to 6.0 */
+/*border-width: 38.5px 0 38.5px 34px;
+border-color: transparent transparent transparent #fff;*/
+}	  
+
+/* SUB FLAD SECTION */
+
+@media (min-width:1000px) {
+
+#subHeader-container {
+width:100%;
+height:30px;
+position:fixed;
+top:80px;
+background-color:transparent;
+z-index:1;
+}
+
+}
+
+.financials tr td:first-child {
+width:70%;
+}
+
+.financials {
+width:100%;
+line-height:2.5em;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+font-size:13px;
+}
+
+.financials tr td:nth-child(2n) {
+text-align: right;
+}
+
+.financials .indent {
+text-indent:15px;
+}
+
+#edthena p {
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+
+/* Style for our header texts 
+* --------------------------------------- */
+/*h1{
+font-size: 5em;	
+font-family: arial,helvetica;
+color: #fff;
+margin:0;
+padding:0;
+}
+.intro p{
+color: #fff;
+}*/
+
+/* Centered texts in each section 
+* --------------------------------------- */
+.section{
+/*text-align:center;*/
+}
+
+
+#section0 #slide1 {
+background: url(img/2500x1400/01-About.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+}
+
+#section1 #slide1 {
+background: url(img/2500x1400/05-Community.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+position:fixed;
+height: 50px;
+display:block;
+width: 100%;
+background: #333;
+z-index:9;
+color: #f2f2f2;
+padding: 20px 0 0 0;
+}
+
+#header{
+top:0px;
+}
+#footer{
+bottom:0px;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu {
+bottom: 80px;
+}
+#infoMenu li a {
+color: #fff;
+z-index: 999;
+}
+
+.navbar-nav>li {
+margin-left:15px;
+width:106px;
+text-align:center;
+}
+
+@media (max-width: 999px) {
+.navbar-nav>li {
+margin-left:0px;
+width:100%;
+text-align:center;
+}
+
+.navbar-nav > li > a {
+padding:0;
+line-height:3em;
+}
+
+}
+
+#home { 
+/* background: url('img/class.jpg') no-repeat center center fixed; */
+background-color:#0F6;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+padding-top:50px;
+width:100%;
+height:100%;
+}
+
+@media (min-width:769px) {
+.dropdown:hover .dropdown-menu {
+display: block;
+padding: 0;
+text-align:left;
+width:106px;
+}			
+
+
+.first {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/1.png);
+color:#FFF; 
+font-color:#FFF 
+}
+
+.second {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/2.png); 
+color:#FFF; 
+font-color:#FFF 
+}
+
+.third {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/3.png); 
+}
+
+.fourth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/4.png); 
+}
+
+.fifth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/5.png); 
+}
+
+
+.sixth {  
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+background-image:url(../img/Numbers/6.png); 
+}
+
+.dropdown-toggle{
+background-position:bottom right; 
+background-repeat:no-repeat;
+}	
+
+.dropdown-toggle:hover{
+background-image:none;
+}
+
+.navbar-nav > li > a {
+padding-top: 0px;
+transition: padding-top 0.5s;
+-webkit-transition: padding-top 0.5s;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:active,
+.navbar-nav > li > a:focus{
+text-align:center;
+font-color:#000;
+color:#000;
+padding-top: 15px;
+text-transform:uppercase;
+}
+
+/* .navbar-nav > li:nth-child(3) > a:hover{
+text-align:center;
+font-color:#000;
+color:#000;
+padding-top: 15px;
+text-transform:uppercase;
+}*/
+
+.navButton{
+color:#FFF; 
+font-color:#FFF 
+}
+
+}
+
+
+#whoWeAre {
+background: url("../img/2500x1400/01-About.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+#whoWeAre3 {
+background-color:#05006d;
+color:white;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+height:150px;
+overflow:visible;
+}
+
+#whoWeAre3 .container {
+/*background: url("../img/whoWeAre/impactataglance-larger.png") no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+background-size: contain;
+background-size: contain;
+height: 100%;
+width: 100%;
+max-width: 1150px;
+background-position: 0 140px;
+background-repeat: no-repeat;
+overflow:visible;*/
+}
+
+#whoWeAre4 {
+background-color:#05006d;
+color:black;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#whoWeAre5 {
+background: url("../img/2500x1400/01-About-1mission.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+border:solid 1px #666;
+}
+
+
+#schoolsAndCities {
+background: url("../img/2500x1400/02-Cities.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+
+#edTech4 {
+background: url("../img/Seed/03-Seed-3colab2.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+color:#005197;
+}
+
+
+
+#community2, #community3 {
+background: url("../img/2500x1400/05-Community-1portfolio2.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+#community4 {
+background-color:#e2e2e2;
+}
+
+#schoolsAndCities2, #schoolsAndCities3 {
+background-color:#89181a;
+color:white;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#edTech2, #edTech3 {
+background-color:#005197;
+color:white;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+.capWord {
+font-family: introFont, "Arial Black", Verdana, "Droid Sans", sans-serif;
+}
+
+
+#edTech {
+background: url("../img/2500x1400/03-Seed.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+
+#teachers {
+background: url("../img/2500x1400/04-LTT.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+#community {
+background: url("../img/2500x1400/05-Community.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+
+#thankYou {
+background: url("../img/2500x1400/06-ThankYou.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+#thankYou2 {
+background-color:#fffd51;
+}
+
+#teachers3 {
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+color:black;
+background-color:#75a8f6;
+}
+
+#thankYou3 {
+background: url("../img/2500x1400/06-ThankYou-2financials.jpg"); 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+.financial-graphic {
+text-align:center;
+}
+.financial-graphic img {
+width:100%; 
+max-width:400px; 
+height:auto; 
+margin: auto;
+}
+
+.donor-list ul {
+list-style:none; 
+line-height:1.4em; 
+font-size:13px;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#summitLogo {
+width:100%;
+max-width:400px;
+}
+
+@media (max-width: 765px){
+#thankYou3 {
+background: none; 
+background-color:#fffd51;
+}
+
+.financial-graphic img {
+width:100%; 
+max-width:300px; 
+height:auto; 
+margin: 20px auto;
+}
+
+}
+
+#schoolsAndCities4 {
+background: url("../img/2500x1400/02-Cities-2citiestall.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+#schoolsAndCities4 p {
+line-height:1.5em;
+}
+
+
+#teachers2 {
+background: url("../img/2500x1400/04-LTT-1about.jpg") no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+@font-face {
+font-family: introFont;
+src: url("../fonts/Intro.otf") format("opentype");
+}
+
+@font-face {
+font-family: proximaNova;
+src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+p {
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+/*font-size:2.3vmin;*/
+font-size:15px;  
+}
+
+.largeWord {
+font-size:26px;	  
+}
+
+h1,h2,h3,h4,h5 {
+font-family:introFont, "Arial Black", Verdana, "Droid Sans", sans-serif;
+}
+
+.FlagBottom {
+width: 100px;
+height: 16px;
+padding-top: 15px;
+position: relative; 
+background: red;
+color: white;
+font-size: 11px;
+letter-spacing: 0.2em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.white {
+color:white;
+}
+
+
+.marginBottom {
+margin-bottom:165px;
+}
+
+
+.FlagBottom:after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 0;
+border-bottom: 13px solid #transparent;
+border-left: 55px solid transparent;
+border-right: 55px solid transparent;
+background:transparent;
+
+}
+
+#goToMain, #shareButtons, #goToMainWrap {
+display:none;
+}
+
+#goToMain {
+text-transform:uppercase;
+}
+
+@media (min-width:1100px) {
+#goToMain{
+display:inline;
+font-style:italic;
+text-align:center;
+margin-right:10px;
+text-transform:lowercase;
+padding:0;
+line-height:1em;
+}
+
+#goToMainWrap {
+display:inline;
+}
+
+#goToMain:hover{
+font-style:italic;
+font-style:bold;
+text-align:center;
+margin-right:10px;
+text-transform:lowercase;
+padding:0;
+line-height:1em;
+}
+}
+
+@media (min-width:1250px) {
+#shareButtons{
+display:inline;
+line-height:2.5em;
+padding-top:5px;
+font-style:italic;
+text-align:center;
+margin-right:10px;
+}
+}
+
+#fader, #seedSlide  {
+position: absolute; 
+width: 100%;
+clear: both;
+height:450px;
+}
+
+#fader img {
+clear:both;
+width:100%;
+height:auto;
+/* NOT SURE YET */
+
+}
+
+
+.controlArrowNew {
+position:fixed;
+top: 50%;
+cursor: pointer;
+width: 0;
+height: 0;
+z-index:1000000;
+/*border-style: solid;*/
+margin-top: -38px;
+}
+.controlArrowNew.prev {
+height:64px;
+width:45px;
+background-image:url("../img/arrow-left.png");	
+left: 15px;
+transition: left 1.0s;
+-webkit-transition: left 1s; /* For Safari 3.1 to 6.0 */
+/*width: 0;
+border-width: 38.5px 34px 38.5px 0;
+border-color: transparent #fff transparent transparent;*/
+}
+
+.controlArrowNew.prev:hover {
+left:5px;
+
+}
+
+.controlArrowNew.next:hover {
+right:5px;
+}
+.controlArrowNew.next {
+height:64px;
+width:45px;
+background-image:url("../img/arrow-right.png");	
+right: 15px;
+transition: right 1.0s;
+-webkit-transition: right 1.0s; /* For Safari 3.1 to 6.0 */
+/*border-width: 38.5px 0 38.5px 34px;
+border-color: transparent transparent transparent #fff;*/
+}	  
+
+/* SUB FLAD SECTION */
+
+@media (min-width:1000px) {
+
+#subHeader-container {
+width:100%;
+height:30px;
+position:fixed;
+top:80px;
+background-color:transparent;
+z-index:1;
+}
+
+}
+
+#financials td {
+width:50%;
+}
+
+#financials {
+width:100%;
+line-height:2.5em;
+font-family:proximaNova, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#financials tr td:nth-child(2n) {
+text-align: right;
+}
+
+#financials .indent {
+text-indent:15px;
+}
+
+
+body {
+/*display:none;*/
+}
+
+.fadein { position:relative; height:auto; min-height:300px; width:100% }
+.fadein img { position:absolute; left:0; top:0; width:80%; height:auto; }
+
+@media (max-width: 993px) {
+.fadein img { position:absolute; left:0; top:0; width:100%; height:auto; }
+}
+
+.fadein-ceo { position:absolute; height:auto; min-height:300px; bottom:15%; right:0%; background-color:black }
+.fadein-ceo img { position:absolute; right:0; top:0; width:100%; height:auto; }
+
+
+
+
+
